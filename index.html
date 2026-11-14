@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Painel de diagnóstico e análise básica de segurança web.">
+
+        <title>SecDashboard | Diagnóstico de Segurança Web</title>
+
+        <!-- Conexão com a folha de estilo externa (Separação de Responsabilidades) -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+
+        <!-- Script carregado com 'defer' para não bloquear a renderização do HTML -->
+        <script src="./assets/js/app.js" defer></script>
+    </head>
+    <body>
+        
+        <!-- Cabeçalho principal da aplicação -->
+        <header class="app-header">
+            <div class="container">
+                <h1>SecDashboard</h1>
+                <p>Módulo 01: Análise de Entropia de Senhas e Higiene Digital</p>
+            </div>
+        </header>
+
+        <!-- Conteúdo Principal única da página -->
+         <main class="container">
+
+            <!-- Seção 1: Ferramentas práticas de avaliação de senhas -->
+            <section aria-labelledby="titulo-validador" class="card">
+                <h2 id="titulo-validador">Analisandor de Força de Senha</h2>
+                <p>Insira uma senha fictícia para testar os critérios de complexidade e entropia.</p>
+            
+            <!-- Formulário semântico e acessível -->
+             <form id="password-form" novalidate>
+                <div class="form-group">
+                    <label for="password-input">Senha para análise:</label>
+                    <input type="password" id="password-input" name="password" placeholder="Digite uma senha de teste..." autocomplete="off">
+                </div>
+                <button type="submit" id="btn-analyze">Analisar Segurança</button>
+             </form>
+
+             <!-- Área reservada para retorno dinâmico via JavaScript -->
+              <div id="result-box" class="result-box" aria-live="polite">
+                <p>Aguardando entrada de dados para diagnóstico...</p>
+              </div>
+            </section>
+
+            <!-- Seção 2: Checklist educacional de fundamentos Web/Sec -->
+             <section aria-labelledby="titulo-checklist" class="card">
+                <h2 id="titulo-checklist">Checklist de Arquitetura e Segurança</h2>
+                <ul>
+                    <li><strong>Protocolo HTTPS:</strong> Garante criptografia em trânsito via TLS.</li>
+                    <li><strong>Semântica HTML5:</strong> Melhora acessibilidade e estruturação de dados.</li>
+                    <li><strong>Separação de Camadas:</strong> HTML, CSS e JS isolados em arquivos próprios.</li>
+                </ul>
+             </section>
+
+         </main>
+         <!-- Rodapé da aplicação -->
+          <footer class="app-footer">
+            <div class="container">
+                <p>Projeto de Portfólio - Engenharia de Software &amp; AppSec</p>
+            </div>
+          </footer>
+          
+    </body>
+</html>
