@@ -1,0 +1,161 @@
+/* ================================= variáveis globais ================================= */
+:root {
+  --bg-color: #0f172a;       /* Azul escuro estilo terminal/cyber */
+  --card-bg: #1e293b;        /* Cinza chumbo para os blocos */
+  --text-primary: #f8fafc;   /* Branco suave para leitura */
+  --text-secondary: #94a3b8; /* Cinza claro para subtítulos */
+  --accent-color: #38bdf8;   /* Azul ciano para destaque/botões */
+  --accent-hover: #0ea5e9;   /* Tom mais escuro para hover */
+  --border-color: #334155;   /* Cor de borda sutil */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ================================= Reset básico ================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ================================= Layout e Containers ================================= */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.app-header {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 2rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.app-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+/* ================================= Cards (Componentização Visual) ================================= */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.card > p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ================================= Formulários e Inputs ================================= */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0f172a;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="password"]:focus {
+  border-color: var(--accent-color);
+}
+
+button[type="submit"] {
+  background-color: var(--accent-color);
+  color: #0f172a;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--accent-hover);
+}
+
+/* ================================= Caixa de Resultados ================================= */
+.result-box {
+  margin-top: 1.25rem;
+  padding: 1rem;
+  background-color: rgba(15, 23, 42, 0.6);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ================================= Listas e Rodapé ================================= */
+ul {
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  background-color: var(--card-bg);
+}
